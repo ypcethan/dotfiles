@@ -29,7 +29,8 @@ require('packer').startup(function(use)
     },
   }
 
-  
+  -- Getting you where you want with the fewest keystrokes.
+  use 'ThePrimeagen/harpoon'
 
   use { -- Autocompletion
     'hrsh7th/nvim-cmp',

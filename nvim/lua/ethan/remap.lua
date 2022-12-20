@@ -21,3 +21,7 @@ vim.keymap.set('n', '[d', vim.diagnostic.goto_prev)
 vim.keymap.set('n', ']d', vim.diagnostic.goto_next)
 vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float)
 vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist)
+
+vim.keymap.set('x', "<leader>p", "\"_dP")
+vim.keymap.set('n', '<leader>d', "\"_d")
+vim.keymap.set('v', '<leader>d', "\"_d")
