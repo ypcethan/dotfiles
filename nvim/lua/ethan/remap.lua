@@ -13,15 +13,17 @@ vim.keymap.set({ 'n', 'v' }, '<Space>', '<Nop>', { silent = true })
 vim.keymap.set('n', 'k', "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = true })
 vim.keymap.set('n', 'j', "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true })
 
-vim.keymap.set('n', '<C-n>', ':NvimTreeToggle<CR>', { silent = true })
 
+-- Reselect visual selection after indenting
+vim.keymap.set('v', '<', '<gv')
+vim.keymap.set('v', '>', '>gv')
 
--- Diagnostic keymaps
-vim.keymap.set('n', '[d', vim.diagnostic.goto_prev)
-vim.keymap.set('n', ']d', vim.diagnostic.goto_next)
-vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float)
-vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist)
+-- Maintain the cursor position when yanking a visual selection.
+-- http://ddrscott.github.io/blog/2016/yank-without-jank/
+vim.keymap.set('v', 'y', 'myy`y')
 
-vim.keymap.set('x', "<leader>p", "\"_dP")
-vim.keymap.set('n', '<leader>d', "\"_d")
-vim.keymap.set('v', '<leader>d', "\"_d")
+-- Disable annoying command line typo.
+vim.keymap.set('n', 'q:', ':q')
+
+-- Paste replace visual selection without copying it.
+vim.keymap.set('v', 'p', '"_dP')

@@ -3,6 +3,7 @@
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 
+vim.keymap.set('n', '<C-n>', ':NvimTreeToggle<CR>', { silent = true })
 
 -- OR setup with some options
 require("nvim-tree").setup({

@@ -11,6 +11,12 @@ vim.o.hlsearch = false
 
 -- Make line numbers default
 vim.wo.number = true
+vim.o.relativenumber = true
+
+-- Complete the longest common match, and allow tabbing the result to fully complete them
+vim.o.wildmode = 'longest:full,full'
+
+vim.o.title = true
 
 -- Enable mouse mode
 vim.o.mouse = 'a'
@@ -24,14 +30,19 @@ vim.o.undofile = true
 -- Case insensitive searching UNLESS /C or capital in search
 vim.o.ignorecase = true
 vim.o.smartcase = true
+vim.o.hlsearch = true
 
 -- Decrease update time
 vim.o.updatetime = 250
 vim.wo.signcolumn = 'yes'
 
--- Set colorscheme
 vim.o.termguicolors = true
-vim.cmd [[colorscheme onedark]]
 
 -- Set completeopt to have a better completion experience
 vim.o.completeopt = 'menuone,noselect'
+
+-- Remove ~ (end of buffer)
+vim.opt.fillchars:append({ eob = ' ' })
+
+-- Ask for confirmation instead of erroring
+vim.opt.confirm = true
