@@ -21,6 +21,8 @@ require('packer').startup(function(use)
     },
   }
 
+  use 'romainl/vim-cool'
+
 
   use { -- Highlight, edit, and navigate code
     'nvim-treesitter/nvim-treesitter',
@@ -40,6 +42,7 @@ require('packer').startup(function(use)
   use 'lewis6991/gitsigns.nvim'
 
   use 'navarasu/onedark.nvim' -- Theme inspired by Atom
+  use 'fenetikm/falcon'
   use 'nvim-lualine/lualine.nvim' -- Fancier statusline
   use 'numToStr/Comment.nvim' -- "gc" to comment visual regions/lines
   use 'JoosepAlviste/nvim-ts-context-commentstring'
@@ -49,9 +52,13 @@ require('packer').startup(function(use)
   use 'christoomey/vim-tmux-navigator'
   use 'kylechui/nvim-surround'
 
+  use 'honza/vim-snippets'
+
   -- Test runner
   use 'vim-test/vim-test'
   use 'christoomey/vim-tmux-runner'
+
+  use 'vim-ruby/vim-ruby'
 
   -- Fuzzy Finder (files, lsp, etc)
   use { 'nvim-telescope/telescope.nvim', branch = '0.1.x', requires = { 'nvim-lua/plenary.nvim' } }

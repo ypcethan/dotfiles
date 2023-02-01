@@ -9,7 +9,7 @@ require('nvim-treesitter.configs').setup {
   },
 
   highlight = { enable = true },
-  indent = { enable = true },
+  -- indent = { enable = true },
   incremental_selection = {
     enable = true,
     keymaps = {
@@ -51,15 +51,6 @@ require('nvim-treesitter.configs').setup {
       goto_previous_end = {
         ['[M'] = '@function.outer',
         ['[]'] = '@class.outer',
-      },
-    },
-    swap = {
-      enable = true,
-      swap_next = {
-        ['<leader>a'] = '@parameter.inner',
-      },
-      swap_previous = {
-        ['<leader>A'] = '@parameter.inner',
       },
     },
   },
