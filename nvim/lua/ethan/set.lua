@@ -53,4 +53,4 @@ vim.o.shiftwidth = 2
 vim.o.autoindent = true
 vim.o.smartindent = true
 
-vim.opt.signcolumn = 'yes:1'
+vim.opt.signcolumn = 'yes:2'
