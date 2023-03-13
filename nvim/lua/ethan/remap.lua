@@ -27,3 +27,7 @@ vim.keymap.set('n', 'q:', ':q')
 
 -- Paste replace visual selection without copying it.
 vim.keymap.set('v', 'p', '"_dP')
+
+vim.keymap.set('n','<C-h>', ':bprevious<Cr>', { silent = true })
+vim.keymap.set('n','<C-l>', ':bnext<Cr>', { silent = true })
+vim.keymap.set('n','<leader>w', ':Bdelete<Cr>', { silent = true })

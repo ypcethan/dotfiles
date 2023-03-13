@@ -90,16 +90,16 @@ require('packer').startup(function(use)
     })
 
   use({
-    'nvim-lualine/lualine.nvim',
-    requires = 'kyazdani42/nvim-web-devicons',
-  })
+      'nvim-lualine/lualine.nvim',
+      requires = 'kyazdani42/nvim-web-devicons',
+    })
 
   use({
-    'kyazdani42/nvim-tree.lua',
-    requires = 'kyazdani42/nvim-web-devicons',
-  })
+      'kyazdani42/nvim-tree.lua',
+      requires = 'kyazdani42/nvim-web-devicons',
+    })
 
-    use({
+  use({
       'nvim-telescope/telescope.nvim',
       requires = {
         { 'nvim-lua/plenary.nvim' },
@@ -109,6 +109,15 @@ require('packer').startup(function(use)
       },
     })
 
+  use({
+      'akinsho/bufferline.nvim',
+      requires = 'kyazdani42/nvim-web-devicons',
+      after = 'onedark.nvim',
+    })
+
+  use({
+    'lukas-reineke/indent-blankline.nvim',
+  })
   -- Add custom plugins to packer from ~/.config/nvim/lua/custom/plugins.lua
   local has_plugins, plugins = pcall(require, 'custom.plugins')
   if has_plugins then
