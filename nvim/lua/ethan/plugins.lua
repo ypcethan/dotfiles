@@ -123,6 +123,12 @@ require('packer').startup(function(use)
     'lewis6991/gitsigns.nvim',
     requires = 'nvim-lua/plenary.nvim',
   })
+
+  use({
+    'tpope/vim-fugitive',
+    requires = 'tpope/vim-rhubarb',
+    cmd = 'G',
+  })
   -- Add custom plugins to packer from ~/.config/nvim/lua/custom/plugins.lua
   local has_plugins, plugins = pcall(require, 'custom.plugins')
   if has_plugins then
