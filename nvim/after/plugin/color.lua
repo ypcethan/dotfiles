@@ -2,5 +2,4 @@
 --   dark_variant = 'moon',
 -- })
 
--- vim.cmd.colorscheme('duskfox')
-vim.cmd.colorscheme('falcon')
+vim.cmd.colorscheme('duskfox')
