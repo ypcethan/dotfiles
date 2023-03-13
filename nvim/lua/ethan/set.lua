@@ -34,7 +34,7 @@ vim.o.hlsearch = true
 
 -- Decrease update time
 vim.o.updatetime = 250
-vim.wo.signcolumn = 'yes'
+-- vim.wo.signcolumn = 'yes'
 
 vim.o.termguicolors = true
 
@@ -52,3 +52,5 @@ vim.o.tabstop = 2
 vim.o.shiftwidth = 2
 vim.o.autoindent = true
 vim.o.smartindent = true
+
+vim.opt.signcolumn = 'yes:1'
