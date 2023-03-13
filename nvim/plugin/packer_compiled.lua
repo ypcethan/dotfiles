@@ -80,6 +80,11 @@ _G.packer_plugins = {
     path = "/Users/ethanchen/.local/share/nvim/site/pack/packer/start/bufdelete.nvim",
     url = "https://github.com/famiu/bufdelete.nvim"
   },
+  ["lualine.nvim"] = {
+    loaded = true,
+    path = "/Users/ethanchen/.local/share/nvim/site/pack/packer/start/lualine.nvim",
+    url = "https://github.com/nvim-lualine/lualine.nvim"
+  },
   ["neoscroll.nvim"] = {
     loaded = true,
     path = "/Users/ethanchen/.local/share/nvim/site/pack/packer/start/neoscroll.nvim",
@@ -91,15 +96,51 @@ _G.packer_plugins = {
     path = "/Users/ethanchen/.local/share/nvim/site/pack/packer/start/nvim-autopairs",
     url = "https://github.com/windwp/nvim-autopairs"
   },
+  ["nvim-tree.lua"] = {
+    loaded = true,
+    path = "/Users/ethanchen/.local/share/nvim/site/pack/packer/start/nvim-tree.lua",
+    url = "https://github.com/kyazdani42/nvim-tree.lua"
+  },
+  ["nvim-web-devicons"] = {
+    loaded = true,
+    path = "/Users/ethanchen/.local/share/nvim/site/pack/packer/start/nvim-web-devicons",
+    url = "https://github.com/kyazdani42/nvim-web-devicons"
+  },
+  ["onedark.nvim"] = {
+    config = { "\27LJ\2\næ\4\0\0\t\0\24\0X6\0\0\0009\0\1\0'\2\2\0B\0\2\0016\0\0\0009\0\3\0009\0\4\0)\2\0\0'\3\5\0005\4\t\0006\5\0\0009\5\3\0059\5\6\5'\a\a\0+\b\2\0B\5\3\0029\5\b\5=\5\n\0046\5\0\0009\5\3\0059\5\6\5'\a\a\0+\b\2\0B\5\3\0029\5\b\5=\5\v\4B\0\4\0016\0\0\0009\0\3\0009\0\4\0)\2\0\0'\3\f\0005\4\15\0006\5\0\0009\5\3\0059\5\6\5'\a\r\0+\b\2\0B\5\3\0029\5\14\5=\5\n\0046\5\0\0009\5\3\0059\5\6\5'\a\16\0+\b\2\0B\5\3\0029\5\b\5=\5\v\4B\0\4\0016\0\0\0009\0\3\0009\0\4\0)\2\0\0'\3\17\0005\4\19\0006\5\0\0009\5\3\0059\5\6\5'\a\18\0+\b\2\0B\5\3\0029\5\b\5=\5\n\0046\5\0\0009\5\3\0059\5\6\5'\a\18\0+\b\2\0B\5\3\0029\5\b\5=\5\v\4B\0\4\0016\0\0\0009\0\3\0009\0\4\0)\2\0\0'\3\20\0005\4\21\0B\0\4\0016\0\0\0009\0\3\0009\0\4\0)\2\0\0'\3\22\0005\4\23\0B\0\4\1K\0\1\0\1\0\1\afg\f#2F313C\24IndentBlanklineChar\1\0\1\afg\f#30323E\25NvimTreeIndentMarker\1\0\0\15CursorLine\17CursorLineBg\15StatusLine\1\0\0\15foreground\fNonText\22StatusLineNonText\abg\afg\1\0\0\15background\16NormalFloat\24nvim_get_hl_by_name\16FloatBorder\16nvim_set_hl\bapi\24colorscheme onedark\bcmd\bvim\0" },
+    loaded = true,
+    path = "/Users/ethanchen/.local/share/nvim/site/pack/packer/start/onedark.nvim",
+    url = "https://github.com/jessarcher/onedark.nvim"
+  },
   ["packer.nvim"] = {
     loaded = true,
     path = "/Users/ethanchen/.local/share/nvim/site/pack/packer/start/packer.nvim",
     url = "https://github.com/wbthomason/packer.nvim"
   },
+  ["plenary.nvim"] = {
+    loaded = true,
+    path = "/Users/ethanchen/.local/share/nvim/site/pack/packer/start/plenary.nvim",
+    url = "https://github.com/nvim-lua/plenary.nvim"
+  },
   ["splitjoin.vim"] = {
     loaded = true,
     path = "/Users/ethanchen/.local/share/nvim/site/pack/packer/start/splitjoin.vim",
     url = "https://github.com/AndrewRadev/splitjoin.vim"
+  },
+  ["telescope-fzf-native.nvim"] = {
+    loaded = true,
+    path = "/Users/ethanchen/.local/share/nvim/site/pack/packer/start/telescope-fzf-native.nvim",
+    url = "https://github.com/nvim-telescope/telescope-fzf-native.nvim"
+  },
+  ["telescope-live-grep-args.nvim"] = {
+    loaded = true,
+    path = "/Users/ethanchen/.local/share/nvim/site/pack/packer/start/telescope-live-grep-args.nvim",
+    url = "https://github.com/nvim-telescope/telescope-live-grep-args.nvim"
+  },
+  ["telescope.nvim"] = {
+    loaded = true,
+    path = "/Users/ethanchen/.local/share/nvim/site/pack/packer/start/telescope.nvim",
+    url = "https://github.com/nvim-telescope/telescope.nvim"
   },
   ["vim-commentary"] = {
     loaded = true,
@@ -174,14 +215,18 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
--- Config for: bufdelete.nvim
-time([[Config for bufdelete.nvim]], true)
-try_loadstring("\27LJ\2\nO\0\0\5\0\6\0\b6\0\0\0009\0\1\0009\0\2\0'\2\3\0'\3\4\0'\4\5\0B\0\4\1K\0\1\0\17:Bdelete<CR>\14<Leader>q\6n\bset\vkeymap\bvim\0", "config", "bufdelete.nvim")
-time([[Config for bufdelete.nvim]], false)
 -- Config for: nvim-autopairs
 time([[Config for nvim-autopairs]], true)
 try_loadstring("\27LJ\2\n<\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\19nvim-autopairs\frequire\0", "config", "nvim-autopairs")
 time([[Config for nvim-autopairs]], false)
+-- Config for: onedark.nvim
+time([[Config for onedark.nvim]], true)
+try_loadstring("\27LJ\2\næ\4\0\0\t\0\24\0X6\0\0\0009\0\1\0'\2\2\0B\0\2\0016\0\0\0009\0\3\0009\0\4\0)\2\0\0'\3\5\0005\4\t\0006\5\0\0009\5\3\0059\5\6\5'\a\a\0+\b\2\0B\5\3\0029\5\b\5=\5\n\0046\5\0\0009\5\3\0059\5\6\5'\a\a\0+\b\2\0B\5\3\0029\5\b\5=\5\v\4B\0\4\0016\0\0\0009\0\3\0009\0\4\0)\2\0\0'\3\f\0005\4\15\0006\5\0\0009\5\3\0059\5\6\5'\a\r\0+\b\2\0B\5\3\0029\5\14\5=\5\n\0046\5\0\0009\5\3\0059\5\6\5'\a\16\0+\b\2\0B\5\3\0029\5\b\5=\5\v\4B\0\4\0016\0\0\0009\0\3\0009\0\4\0)\2\0\0'\3\17\0005\4\19\0006\5\0\0009\5\3\0059\5\6\5'\a\18\0+\b\2\0B\5\3\0029\5\b\5=\5\n\0046\5\0\0009\5\3\0059\5\6\5'\a\18\0+\b\2\0B\5\3\0029\5\b\5=\5\v\4B\0\4\0016\0\0\0009\0\3\0009\0\4\0)\2\0\0'\3\20\0005\4\21\0B\0\4\0016\0\0\0009\0\3\0009\0\4\0)\2\0\0'\3\22\0005\4\23\0B\0\4\1K\0\1\0\1\0\1\afg\f#2F313C\24IndentBlanklineChar\1\0\1\afg\f#30323E\25NvimTreeIndentMarker\1\0\0\15CursorLine\17CursorLineBg\15StatusLine\1\0\0\15foreground\fNonText\22StatusLineNonText\abg\afg\1\0\0\15background\16NormalFloat\24nvim_get_hl_by_name\16FloatBorder\16nvim_set_hl\bapi\24colorscheme onedark\bcmd\bvim\0", "config", "onedark.nvim")
+time([[Config for onedark.nvim]], false)
+-- Config for: bufdelete.nvim
+time([[Config for bufdelete.nvim]], true)
+try_loadstring("\27LJ\2\nO\0\0\5\0\6\0\b6\0\0\0009\0\1\0009\0\2\0'\2\3\0'\3\4\0'\4\5\0B\0\4\1K\0\1\0\17:Bdelete<CR>\14<Leader>q\6n\bset\vkeymap\bvim\0", "config", "bufdelete.nvim")
+time([[Config for bufdelete.nvim]], false)
 
 _G._packer.inside_compile = false
 if _G._packer.needs_bufread == true then
