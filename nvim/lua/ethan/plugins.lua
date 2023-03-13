@@ -127,7 +127,6 @@ require('packer').startup(function(use)
   use({
     'tpope/vim-fugitive',
     requires = 'tpope/vim-rhubarb',
-    cmd = 'G',
   })
 
   use({
@@ -145,6 +144,7 @@ require('packer').startup(function(use)
   requires = {
     "williamboman/mason.nvim",
     "williamboman/mason-lspconfig.nvim",
+    'b0o/schemastore.nvim',
       },
     })
 

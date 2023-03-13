@@ -19,6 +19,16 @@ require'lspconfig'.tailwindcss.setup({
     capabilities = capabilities,
 })
 
+-- JSON
+require('lspconfig').jsonls.setup({
+    capabilities = capabilities,
+    settings = {
+      json = {
+        schemas = require('schemastore').json.schemas(),
+      }
+    }
+  })
+
 
 vim.diagnostic.config({
   virtual_text = false,
