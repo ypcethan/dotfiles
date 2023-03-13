@@ -10,6 +10,56 @@ end
 require('packer').startup(function(use)
   -- Package manager
   use 'wbthomason/packer.nvim'
+  use('christoomey/vim-tmux-navigator')
+  use('farmergreg/vim-lastplace') -- Jump to the last location when opening a file
+  use('tpope/vim-commentary')
+  use('tpope/vim-repeat')
+  use('tpope/vim-surround')
+  use('tpope/vim-eunuch') -- Adds :Rename, :SudoWrite
+  use('tpope/vim-unimpaired') -- Adds [b and other handy mappings
+  use('tpope/vim-sleuth') -- Indent autodetection with editorconfig support
+  use('jessarcher/vim-heritage') -- Automatically create parent dirs when saving
+  use('nelstrom/vim-visual-star-search') -- Enable * searching with visually selected text.
+  use('sheerun/vim-polyglot') -- Add more langauges
+
+  -- Adding text object to select HTML attribute
+  -- ix, ax
+  use({
+      'whatyouhide/vim-textobj-xmlattr',
+      requires = 'kana/vim-textobj-user',
+    })
+
+
+  use({
+      'windwp/nvim-autopairs',
+      config = function()
+        require('nvim-autopairs').setup()
+      end,
+    })
+
+  -- Add smooth scolling to avoid jarring jumps
+  use({
+      'karb94/neoscroll.nvim',
+    })
+
+  -- Close buffer without close the window
+  use({
+      'famiu/bufdelete.nvim',
+      config = function()
+        vim.keymap.set('n', '<Leader>q', ':Bdelete<CR>')
+      end,
+    })
+
+  -- Split arrays and method onto multiple lines, or join them back.
+  use({
+      'AndrewRadev/splitjoin.vim',
+    })
+
+  -- Automatically fix indentation when pasting code.
+  use({
+      'sickill/vim-pasta',
+    })
+
 
   -- Add custom plugins to packer from ~/.config/nvim/lua/custom/plugins.lua
   local has_plugins, plugins = pcall(require, 'custom.plugins')
@@ -38,9 +88,9 @@ end
 -- Automatically source and re-compile packer whenever you save this init.lua
 local packer_group = vim.api.nvim_create_augroup('Packer', { clear = true })
 vim.api.nvim_create_autocmd('BufWritePost', {
-  command = 'source <afile> | PackerCompile',
-  group = packer_group,
-  pattern = vim.fn.expand '$MYVIMRC',
-})
+    command = 'source <afile> | PackerCompile',
+    group = packer_group,
+    pattern = vim.fn.expand '$MYVIMRC',
+  })
 
 
